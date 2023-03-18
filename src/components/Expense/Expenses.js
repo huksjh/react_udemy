@@ -1,20 +1,29 @@
 import React from "react";
+import ExpenseFilter from "../NewExpense/ExpenseFilter";
 import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
 
 import "./Expenses.css";
 const Expenses = (props) => {
+	const filterChangeHandler = (year) => {
+		console.log("filterChangeHandler");
+		console.log(year);
+	};
+
 	return (
-		<Card className="expenses">
-			{props.items.map((item) => (
-				<ExpenseItem
-					key={item.id}
-					title={item.title}
-					amount={item.amount}
-					date={item.date}
-				/>
-			))}
-		</Card>
+		<div>
+			<Card className="expenses">
+				<ExpenseFilter onChangeFilter={filterChangeHandler} />
+				{props.items.map((item) => (
+					<ExpenseItem
+						key={item.id}
+						title={item.title}
+						amount={item.amount}
+						date={item.date}
+					/>
+				))}
+			</Card>
+		</div>
 	);
 };
 
