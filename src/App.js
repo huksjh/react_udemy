@@ -30,10 +30,15 @@ function App() {
 		},
 	];
 
+	const addExpenseData = (expense) => {
+		console.log("In App.js");
+		console.log(expense);
+	};
+
 	return (
 		<div>
 			<h2>Let's get started!</h2>
-			<NewExpense />
+			<NewExpense onAddExpenseData={addExpenseData} />
 			<Expenses items={expenses} />
 		</div>
 	);
