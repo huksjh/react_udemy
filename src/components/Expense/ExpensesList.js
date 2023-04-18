@@ -5,7 +5,7 @@ import "./ExpensesList.css";
 
 const ExpesesList = (props) => {
     if (props.items.length === 0) {
-        return <h1 className="expenses-list__fallbak">검색된 데이터가 없습니다.</h1>;
+        return <h1 className="expenses-list__fallback">검색된 데이터가 없습니다.</h1>;
     }
     return (
         <ul className="expenses-list">
