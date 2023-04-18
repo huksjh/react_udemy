@@ -20,8 +20,9 @@ const ExpenseChart = (props) => {
     ];
 
     // expense 입력받은 값 불러오기
-    for (const expense in props.expenses) {
+    for (const expense of props.expenses) {
         // 1월,2월 구하기   getMonth 시작은 0부터   0- 1월, 1-2월, 2-3월....
+        console.log(expense);
         const expenseMonth = expense.date.getMonth();
         console.log(expenseMonth);
         chartDataPoints[expenseMonth].value += expense.amount;
