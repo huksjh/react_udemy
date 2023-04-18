@@ -11,6 +11,7 @@ const Expenses = (props) => {
         setFiltereYear(selectedYear);
     };
 
+    // App.js 에서 넘어온 items
     const filterExpenses = props.items.filter((item) => {
         return item.date.getFullYear().toString() === filteredYear;
     });
