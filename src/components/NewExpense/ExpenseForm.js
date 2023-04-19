@@ -45,7 +45,7 @@ const ExpenseForm = (props) => {
         // 입력받은 데이터 가공
         const expenses = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate),
         };
 
